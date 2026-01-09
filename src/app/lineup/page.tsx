@@ -7,7 +7,7 @@ export default function Lineup() {
     { name: "The Local Train", time: "8:00 PM", day: "Day 1", color: "bg-fest-red" },
     { name: "When Chai Met Toast", time: "6:30 PM", day: "Day 1", color: "bg-fest-orange" },
     { name: "Papon", time: "9:00 PM", day: "Day 2", color: "bg-fest-green" },
-    { name: "Zubeen Garg", time: "7:30 PM", day: "Day 2", color: "bg-fest-yellow" },
+    { name: "Javed Ali", time: "7:30 PM", day: "Day 2", color: "bg-fest-yellow" },
     { name: "Indie Rockers", time: "4:00 PM", day: "Day 1", color: "bg-fest-sky" },
     { name: "Folk Brothers", time: "5:00 PM", day: "Day 2", color: "bg-fest-red" },
   ];
