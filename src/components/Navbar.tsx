@@ -2,17 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"; 
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Music, Menu, X, Ticket } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  // UPDATED LINKS LIST: Added "Stalls"
   const links = [
     { name: "Home", href: "/" },
     { name: "Lineup", href: "/lineup" },
+    { name: "Stalls", href: "/stalls" }, // <--- NEW LINK ADDED HERE
     { name: "Tickets", href: "/tickets" },
     { name: "About", href: "/about" },
   ];
@@ -21,16 +24,17 @@ export default function Navbar() {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 p-4 pointer-events-none">
         <div className="max-w-7xl mx-auto pointer-events-auto">
-          <div className="bg-white border-4 border-black shadow-funky rounded-2xl flex justify-between items-center p-3 md:p-4">
+          <div className="bg-white border-4 border-black shadow-funky rounded-2xl flex justify-between items-center p-2 md:p-3">
             
-            {/* LOGO */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="bg-fest-orange w-10 h-10 md:w-12 md:h-12 border-4 border-black rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform">
-                <Music className="w-5 h-5 md:w-6 md:h-6" />
-              </div>
-              <span className="font-bangers text-2xl md:text-3xl tracking-wide mt-1 group-hover:text-fest-red transition-colors">
-                MSF '26
-              </span>
+            {/* LOGO IMAGE */}
+            <Link href="/" className="relative block w-32 h-12 md:w-40 md:h-14 hover:scale-105 transition-transform">
+               <Image 
+                 src="/logo.png" 
+                 alt="Makar Sankranti Festival" 
+                 fill
+                 className="object-contain"
+                 priority
+               />
             </Link>
 
             {/* DESKTOP LINKS */}
