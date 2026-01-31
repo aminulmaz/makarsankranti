@@ -33,39 +33,23 @@ export default function Lineup() {
       image: "/artists/fakira.jpg" 
     },
     // --- OTHERS ---
-    { 
-      name: "NUCLEYA", 
-      tag: "BASS RAJA", 
-      date: "Feb 8", 
-      dayLabel: "DAY 2", 
-      color: "bg-fest-red", 
-      image: "/artists/nucleya.jpg" 
-    },
-    { 
-      name: "INDIAN OCEAN", 
-      tag: "FUSION LEGENDS", 
-      date: "Feb 7", 
-      dayLabel: "DAY 1", 
-      color: "bg-fest-green", 
-      image: "/artists/indianocean.jpg" 
-    },
-    { 
-      name: "PAPON", 
-      tag: "FOLK STAR", 
-      date: "Feb 8", 
-      dayLabel: "DAY 2", 
-      color: "bg-fest-orange", 
-      image: "/artists/papon.jpg" 
-    },
-    { 
+     { 
       name: "RITO RIBA", 
       tag: "RISING STAR", 
       date: "Feb 8", 
       dayLabel: "DAY 2", 
       color: "bg-fest-sky", 
-      image: "/artists/rito-raba.jpg" 
+      image: "/artists/rito-riba.jpg" 
     },
     { 
+      name: "PAWANDEEP RAJAN", 
+      tag: "EMERGING ICON", 
+      date: "Feb 7", 
+      dayLabel: "DAY 1", 
+      color: "bg-fest-green", 
+      image: "/artists/pawandeep.jpg" 
+    },
+     { 
       name: "ROMY", 
       tag: "CHART-TOPPER", 
       date: "Feb 7", 
@@ -73,6 +57,8 @@ export default function Lineup() {
       color: "bg-fest-orange", 
       image: "/artists/romy.jpg" 
     },
+    
+
   ];
 
   return (

@@ -5,7 +5,6 @@ import "./globals.css";
 // Components
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import MaintenanceGuard from "@/components/MaintenanceGuard";
 
 const bangers = Bangers({
   weight: "400",
@@ -21,17 +20,14 @@ const poppins = Poppins({
   display: "swap",
 });
 
-// --- SEO SUPERCHARGE ---
 export const metadata: Metadata = {
-  metadataBase: new URL('https://makarsankrantifestival.com'), // REPLACE WITH YOUR REAL DOMAIN
+  metadataBase: new URL('https://makarsankrantifestival.com'), // Replace with real domain
   title: {
     default: "Makar Sankranti Festival 2026 | Silchar's Biggest Event",
     template: "%s | MSF '26"
   },
   description: "Join the loudest festival in Silchar! Live music, kites, food, and vibes. Featuring Shreya Ghoshal, Divine, and more on Feb 7th & 8th, 2026.",
   keywords: ["Makar Sankranti", "Silchar Festival", "Assam Events", "Shreya Ghoshal Silchar", "Divine Concert", "Kite Festival Assam", "Sonai Events"],
-  authors: [{ name: "Aminul Mazumder" }],
-  creator: "Aminul Mazumder",
   openGraph: {
     title: "Makar Sankranti Festival 2026",
     description: "Silchar's craziest weekend is back. Feb 7-8. Don't miss out!",
@@ -39,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'MSF 2026',
     images: [
       {
-        url: '/og-image.jpg', // Create a 1200x630px image and put it in public folder
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Makar Sankranti Festival Vibes',
@@ -47,16 +43,6 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Makar Sankranti Festival 2026",
-    description: "The biggest music & kite festival in Assam.",
-    images: ['/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
   icons: {
     icon: "/logo.jpg",
@@ -71,11 +57,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bangers.variable} ${poppins.variable}`}>
       <body className="antialiased bg-white text-black selection:bg-fest-red selection:text-white">
-        <MaintenanceGuard>
           <Navbar />
           {children}
           <Footer />
-        </MaintenanceGuard>
       </body>
     </html>
   );

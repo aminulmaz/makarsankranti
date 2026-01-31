@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Calendar, Star, Users, Music2, Plus, Minus } from "lucide-react";
+import { MapPin, Calendar, Star, Users, Music2, Plus, Minus, AlertCircle } from "lucide-react";
 
 export default function About() {
   return (
@@ -31,57 +31,67 @@ export default function About() {
                     EST. 2026
                 </span>
                 <h1 className="font-bangers text-6xl md:text-8xl text-black text-stroke-2 leading-none">
-                    THE STORY
+                    THE VISION
                 </h1>
             </div>
             
             <div className="prose prose-lg font-poppins text-black font-medium text-lg leading-relaxed text-justify md:text-center max-w-3xl mx-auto">
                 <p className="mb-6">
-                    <span className="font-bangers text-3xl text-fest-red">MAKAR SANKRANTI FEST 2026</span> is not just an event; it's a movement. It is a <span className="bg-fest-yellow px-2 border-2 border-black font-bold">two-day mega cultural festival</span> celebrating the spirit of togetherness while showcasing Assam's and India's rich heritage. 
+                    <span className="font-bangers text-3xl text-fest-red">MAKAR SANKRANTI FEST 2026</span> is Silchar's biggest cultural convergence. We are bringing together the loudest beats, the tastiest local flavors, and a community that knows how to celebrate.
                 </p>
                 <p className="mb-6">
-                    What started as a simple idea to fly kites has turned into a massive gathering. The event is expected to attract a diverse audience from across <span className="bg-fest-sky px-2 border-2 border-black font-bold">Assam and neighboring states</span>, bringing everyone under one colorful sky in Sonai, Silchar.
+                    It is not just about a concert; it is about reclaiming our weekends. From top-tier artist lineups to curated flea markets, we are building a <span className="bg-fest-yellow px-2 border-2 border-black font-bold">safe, high-energy space</span> for the youth of Assam to connect and vibe.
                 </p>
                 <p>
-                    We don't do boring. We do mud, music, culture, and kites that touch the clouds.
+                    We don't do boring. We do loud, proud, and unforgettable.
                 </p>
             </div>
 
             {/* STATS GRID */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <StatBox icon={<Calendar />} value="2 DAYS" label="Non-Stop Vibes" color="bg-fest-orange" />
-                <StatBox icon={<Users />} value="5000+" label="Expected Crowd" color="bg-fest-green" />
+                <StatBox icon={<Users />} value="10000+" label="Expected Crowd" color="bg-fest-green" />
                 <StatBox icon={<Music2 />} value="20+" label="Artists & Bands" color="bg-fest-red" />
             </div>
 
         </div>
 
-        {/* --- FAQ SECTION (Accordion) --- */}
+        {/* --- LOGICAL FAQ SECTION --- */}
         <div className="max-w-3xl mx-auto">
             <h2 className="font-bangers text-5xl text-center text-white text-stroke-4 mb-8 drop-shadow-funky">
-                WTF (WHAT TO FESTIVAL)
+                F.A.Q (THE IMPORTANT STUFF)
             </h2>
             
             <div className="flex flex-col gap-4">
                 <FAQItem 
-                    question="Where exactly is the venue?" 
-                    answer="The festival is happening at the Riverfront Grounds in Sonai, Silchar. Just follow the giant kites in the sky!"
+                    question="Is my ticket valid for both days?" 
+                    answer="No. Unless you have purchased a 'Season Pass' (2-Day Access), your ticket is valid ONLY for the specific date mentioned on it."
                     color="bg-fest-yellow"
                 />
                 <FAQItem 
-                    question="Is parking available?" 
-                    answer="Yes! We have a dedicated parking zone near the main entrance. It is paid parking, so carpool if you can to save money and the planet."
+                    question="What time do gates open?" 
+                    answer="Gates open at 2:00 PM on both days. We recommend arriving early to avoid long queues and catch the opening acts."
                     color="bg-fest-sky"
                 />
                 <FAQItem 
-                    question="Can I bring my own kite?" 
-                    answer="Absolutely! But we also provide a 'Pro Kite Kit' with every ticket, so you don't strictly need to."
+                    question="Is re-entry allowed?" 
+                    answer="No. Once you exit the venue gates, you cannot re-enter with the same ticket. Please carry everything you need (jackets, power banks) with you."
                     color="bg-fest-orange"
                 />
                 <FAQItem 
-                    question="Are food and drinks included?" 
-                    answer="No, but we have a curated 'Food Street' with the best local stalls from Silchar. Cash and UPI are accepted everywhere."
+                    question="Are food and drinks allowed from outside?" 
+                    answer="Strictly NO. We have a curated Food Court inside with diverse options at affordable prices. Water bottles are also not allowed for security reasons (water stations available inside)."
                     color="bg-fest-green"
+                />
+                <FAQItem 
+                    question="Is there an age limit?" 
+                    answer="The festival is open to all ages. However, children below 12 must be accompanied by an adult. ID proof is mandatory for entry."
+                    color="bg-white"
+                />
+                 <FAQItem 
+                    question="What about parking?" 
+                    answer="Limited paid parking is available near the venue on a first-come-first-serve basis. We strongly suggest carpooling or using public transport to avoid traffic congestion."
+                    color="bg-fest-red text-white"
                 />
             </div>
         </div>
@@ -112,7 +122,9 @@ function FAQItem({ question, answer, color }: any) {
           onClick={() => setIsOpen(!isOpen)}
           className={`w-full text-left p-4 md:p-6 border-4 border-black shadow-funky-sm flex justify-between items-center ${isOpen ? color : 'bg-white'} transition-colors duration-200 group`}
         >
-          <span className="font-bangers text-xl md:text-2xl tracking-wide group-hover:translate-x-1 transition-transform">{question}</span>
+          <span className={`font-bangers text-xl md:text-2xl tracking-wide group-hover:translate-x-1 transition-transform ${color.includes('text-white') && isOpen ? 'text-white' : 'text-black'}`}>
+            {question}
+          </span>
           <div className="bg-black text-white p-1 rounded border-2 border-black">
              {isOpen ? <Minus size={20} /> : <Plus size={20} />}
           </div>
@@ -126,7 +138,7 @@ function FAQItem({ question, answer, color }: any) {
                     exit={{ height: 0, opacity: 0 }}
                     className="overflow-hidden"
                 >
-                    <div className="bg-white border-4 border-t-0 border-black p-6 font-poppins font-medium text-gray-800 leading-relaxed">
+                    <div className="bg-white border-4 border-t-0 border-black p-6 font-poppins font-medium text-gray-800 leading-relaxed text-lg">
                         {answer}
                     </div>
                 </motion.div>

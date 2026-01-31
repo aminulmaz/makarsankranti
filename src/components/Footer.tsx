@@ -27,7 +27,7 @@ export default function Footer() {
             <div>
                 <h2 className="font-bangers text-6xl text-fest-yellow text-stroke-2 mb-2">MSF '26</h2>
                 <p className="font-poppins text-gray-400 max-w-sm text-lg">
-                  Sonai, Silchar's loudest, craziest, and most colorful weekend. Don't be the one watching stories from home.
+                  Assam's loudest, craziest, and most colorful weekend. Don't be the one watching stories from home.
                 </p>
             </div>
             
@@ -75,8 +75,8 @@ export default function Footer() {
 
              <div className="bg-fest-green border-4 border-black p-4 shadow-funky-sm -rotate-2 w-full md:w-auto text-center md:text-right">
                 <p className="font-bangers text-black text-2xl">NEED HELP?</p>
-                <a href="mailto:hello@msf26.com" className="font-poppins font-bold text-black hover:underline decoration-2">
-                    hello@msf26.com
+                <a href="mailto:makarsankrantifestivalsonai@gmail.com" className="font-poppins font-bold text-black hover:underline decoration-2">
+                    makarsankrantifestivalsonai@gmail.com
                 </a>
              </div>
              

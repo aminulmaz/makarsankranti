@@ -207,8 +207,8 @@ export default function Home() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                     <ComicPanel name="SHREYA GHOSHAL" role="THE VOICE" color="bg-fest-sky" image="/artists/shreya.jpg" />
-                     <ComicPanel name="DIVINE" role="HEADLINER" color="bg-fest-red" image="/artists/divine.jpg" />
+                     <ComicPanel name="SHREYA GHOSHAL" role="HEADLINER OF DAY 2" color="bg-fest-sky" image="/artists/shreya.jpg" />
+                     <ComicPanel name="DIVINE" role="HEADLINER OF DAY 1" color="bg-fest-red" image="/artists/divine.jpg" />
                      <ComicPanel name="FAKIRA" role="ROCK BAND" color="bg-fest-green" image="/artists/fakira.jpg" />
                   </div>
 
